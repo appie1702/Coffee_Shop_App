@@ -17,11 +17,17 @@ import GradientBGIcon from './GradientBGIcon';
 import ProfilePic from './ProfilePic';
 import CustomIcon from './CustomIcon';
 
-/* interface HeaderBarProps {
-  title?: string;
-} */
+interface HeaderBarProps {
+  searchCoffee: (search: string) => void;
+  clearSearch: () => void;
+  headerTitle?: string;
+}
 
-const HeaderBar: React.FC = () => {
+const HeaderBar: React.FC<HeaderBarProps> = ({
+  searchCoffee,
+  clearSearch,
+  headerTitle,
+}) => {
   const [searchText, setsearchText] = useState('');
 
   return (
@@ -31,28 +37,59 @@ const HeaderBar: React.FC = () => {
         color={COLORS.primaryLightGreyHex}
         size={FONTSIZE.size_16}
       />
-      {/* <Text style={styles.HeaderText}>{title}</Text> */}
-      <View style={styles.InputContainerComponent}>
-        <TouchableOpacity onPress={() => {}} style={styles.InputIcon}>
-          <CustomIcon
-            name="search"
-            size={FONTSIZE.size_18}
-            color={
-              searchText?.length > 0
-                ? COLORS.primaryOrangeHex
-                : COLORS.primaryLightGreyHex
-            }
+      {headerTitle ? (
+        <View style={styles.HaderTextContainer}>
+          <Text style={styles.HeaderText}>{headerTitle}</Text>
+        </View>
+      ) : (
+        <View style={styles.InputContainerComponent}>
+          <TouchableOpacity
+            activeOpacity={0.7}
+            onPress={() => {
+              searchCoffee(searchText);
+            }}
+            style={styles.InputIcon}>
+            <CustomIcon
+              name="search"
+              size={FONTSIZE.size_18}
+              color={
+                searchText?.length > 0
+                  ? COLORS.primaryOrangeHex
+                  : COLORS.primaryLightGreyHex
+              }
+            />
+          </TouchableOpacity>
+          <TextInput
+            textAlignVertical={'center'}
+            placeholder="Search Coffee..."
+            value={searchText}
+            onChangeText={text => {
+              setsearchText(text);
+              searchCoffee(text);
+            }}
+            placeholderTextColor={COLORS.primaryLightGreyHex}
+            style={styles.TextInputContainer}
           />
-        </TouchableOpacity>
-        <TextInput
-          textAlignVertical={'center'}
-          placeholder="Search Coffee..."
-          value={searchText}
-          onChangeText={text => setsearchText(text)}
-          placeholderTextColor={COLORS.primaryLightGreyHex}
-          style={styles.TextInputContainer}
-        />
-      </View>
+          {searchText.length > 0 ? (
+            <TouchableOpacity
+              activeOpacity={0.7}
+              onPress={() => {
+                setsearchText('');
+                clearSearch();
+              }}
+              style={styles.CloseIcon}>
+              <CustomIcon
+                name={'close'}
+                size={FONTSIZE.size_10}
+                color={COLORS.primaryLightGreyHex}
+              />
+            </TouchableOpacity>
+          ) : (
+            <></>
+          )}
+        </View>
+      )}
+
       <ProfilePic />
     </View>
   );
@@ -73,14 +110,20 @@ const styles = StyleSheet.create({
     fontSize: FONTSIZE.size_20,
     color: COLORS.primaryWhiteHex,
   },
+  HaderTextContainer: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginHorizontal: SPACING.space_10,
+  },
   InputContainerComponent: {
     flex: 1,
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
-    margin: SPACING.space_10,
+    marginHorizontal: SPACING.space_10,
     borderRadius: BORDERRADIUS.radius_8,
-    backgroundColor: COLORS.primaryDarkGreyHex,
+
     width: '100%',
   },
   InputIcon: {
@@ -94,6 +137,7 @@ const styles = StyleSheet.create({
     color: COLORS.primaryWhiteHex,
     padding: 0,
   },
+  CloseIcon: {marginHorizontal: SPACING.space_12},
 });
 
 export default HeaderBar;
