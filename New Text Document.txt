@@ -1,3 +1,6 @@
 helper references:-
 
 app icon generator
+icon kitchen
+
+copying icon..._round.png in every folder
