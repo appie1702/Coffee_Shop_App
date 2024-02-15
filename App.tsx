@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import TabNavigator from './src/navigators/TabNavigator';
@@ -7,9 +7,15 @@ import PaymentScreen from './src/screens/PaymentScreen';
 import {persistor, store} from './src/store/store';
 import {Provider} from 'react-redux';
 import {PersistGate} from 'redux-persist/integration/react';
+import SplashScreen from 'react-native-splash-screen';
 
 const Stack = createNativeStackNavigator();
+
 const App = () => {
+  useEffect(() => {
+    SplashScreen.hide();
+  }, []);
+
   return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
