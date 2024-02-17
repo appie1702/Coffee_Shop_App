@@ -2,9 +2,11 @@ This is a Coffee and beans shop mobile application project, developed in React N
 
 # UI of the application:-
 
-<img src="./src/assets/result_images/image7.jpg" height="400" width="200"/>
-<img src="./src/assets/result_images/image6.jpg" height="400" width="200"/>
-<img src="./src/assets/result_images/image4.jpg" height="400" width="200"/>
-<img src="./src/assets/result_images/image3.jpg" height="400" width="200"/>
-<img src="./src/assets/result_images/image1.jpg" height="400" width="200"/>
-<img src="./src/assets/result_images/image2.jpg" height="400" width="200"/>
+<p align="left" display="flex" flex-direction="row" gap="100">
+  <img src="./src/assets/result_images/image7.jpg" height="450" width="220"/>
+  <img src="./src/assets/result_images/image6.jpg" height="450" width="220"/>
+  <img src="./src/assets/result_images/image4.jpg" height="450" width="220"/>
+  <img src="./src/assets/result_images/image3.jpg" height="450" width="220"/>
+  <img src="./src/assets/result_images/image1.jpg" height="450" width="220"/>
+  <img src="./src/assets/result_images/image2.jpg" height="450" width="220"/>
+</p>
