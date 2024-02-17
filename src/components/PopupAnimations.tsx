@@ -6,11 +6,16 @@ import LottieView from 'lottie-react-native';
 interface PopupAnimationsProps {
   style: any;
   source: any;
+  loop?: boolean;
 }
-const PopupAnimations: React.FC<PopupAnimationsProps> = ({style, source}) => {
+const PopupAnimations: React.FC<PopupAnimationsProps> = ({
+  style,
+  source,
+  loop = false,
+}) => {
   return (
     <View style={styles.LottieAnimationsContainer}>
-      <LottieView style={style} source={source} autoPlay loop={false} />
+      <LottieView style={style} source={source} autoPlay loop={loop} />
     </View>
   );
 };

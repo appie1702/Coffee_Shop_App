@@ -50,6 +50,14 @@
       "sha1": "b375405f6f071ffff4e8b605f910c9a596e29912"
     },
     {
+      "path": "src/assets/coffee_assets/background_images/coffee1.jpg",
+      "sha1": "0827117cbdb03b021a3345af4d532b5b2b0af5a1"
+    },
+    {
+      "path": "src/assets/coffee_assets/background_images/coffee2.jpg",
+      "sha1": "cdcbcdc4567a1e00929a2733ba42f50f007228ed"
+    },
+    {
       "path": "src/assets/coffee_assets/black_coffee/portrait/black_coffee_pic_1_portrait.png",
       "sha1": "8ad3aef75b17cfa2cf331c0a2627b6b86fbd7e68"
     },
@@ -232,6 +240,10 @@
     {
       "path": "src/assets/fonts/Poppins-Thin.ttf",
       "sha1": "09ba4dcd5509c8085bf88c665dcc51cbdfced27b"
+    },
+    {
+      "path": "src/assets/logo.png",
+      "sha1": "d9dcbb5921a4cedbda0726aeb0213882606a79a5"
     }
   ]
 }

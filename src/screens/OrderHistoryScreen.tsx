@@ -21,13 +21,12 @@ import EmptyListAnimation from '../components/EmptyListAnimation';
 import PopupAnimations from '../components/PopupAnimations';
 import OrderHistoryCard from '../components/OrderHistory/OrderHistoryCard';
 
-const OrderHistoryScreen = ({navigation, route}: any) => {
+const OrderHistoryScreen = ({navigation}: any) => {
   const [showAnimation, setshowAnimation] = useState(false);
   const orderHistoryList = useSelector(
     (state: any) => state.data.OrderHistoryList,
   );
   const tabbarHeight = useBottomTabBarHeight();
-  console.log({orderHistoryList: orderHistoryList[0]});
 
   const navigationHandler = ({index, id, type}: any) => {
     navigation.push('Details', {index, id, type});

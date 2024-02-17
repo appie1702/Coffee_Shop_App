@@ -41,7 +41,6 @@ const CartScreen = ({navigation}: any) => {
     dispatch(calculateCartPrice({}));
   };
 
-  console.log({cartList: cartList.length, cartPrice});
   return (
     <View style={styles.ScreenContainer}>
       <StatusBar backgroundColor={COLORS.primaryBlackHex} />

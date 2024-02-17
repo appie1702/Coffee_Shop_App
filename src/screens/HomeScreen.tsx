@@ -24,6 +24,7 @@ import CoffeeCard from '../components/CoffeeCard';
 import {useDebouncedCallback} from 'use-debounce';
 import {ThunkDispatch} from '@reduxjs/toolkit';
 import {addToCart, calculateCartPrice} from '../features/dataSlice';
+
 const windowDimensions = Dimensions.get('window');
 const screenDimensions = Dimensions.get('screen');
 

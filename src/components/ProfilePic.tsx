@@ -1,15 +1,21 @@
 import React from 'react';
-import {StyleSheet, Image, View} from 'react-native';
+import {StyleSheet, Image, TouchableOpacity} from 'react-native';
 import {COLORS, SPACING} from '../theme/theme';
 
-const ProfilePic = () => {
+const ProfilePic = ({source, onPress}: any) => {
   return (
-    <View style={styles.ImageContainer}>
+    <TouchableOpacity style={styles.ImageContainer} onPress={onPress}>
       <Image
-        source={require('../assets/app_images/avatar.png')}
+        source={
+          source
+            ? {
+                uri: source,
+              }
+            : require('../assets/app_images/avatar.png')
+        }
         style={styles.Image}
       />
-    </View>
+    </TouchableOpacity>
   );
 };
 

@@ -19,7 +19,6 @@ const dataSlice = createSlice({
   reducers: {
     addToCart: (state, action) => {
       const {itemToAdd} = action.payload;
-      console.log({itemToAdd});
       let found = false;
       for (let i = 0; i < state.CartList.length; i++) {
         if (state.CartList[i].id === itemToAdd.id) {

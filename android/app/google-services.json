@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "811491759167",
+    "project_id": "coffy-app-34105",
+    "storage_bucket": "coffy-app-34105.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:811491759167:android:11a6451bbb8ea826cb148a",
+        "android_client_info": {
+          "package_name": "com.coffee_shop_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "811491759167-ug22kppdagnq85kvh5n5nr5ehqidmo8m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.coffee_shop_app",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "811491759167-ppvahnfai9j5vsqg3abdlagddr052tvq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlL4qQ99-g_uwbYskceMRJqMDx6y3hfEU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "811491759167-ppvahnfai9j5vsqg3abdlagddr052tvq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
